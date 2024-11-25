@@ -1,0 +1,275 @@
+﻿* {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: oldalcim;
+	src: url(betutipusok/oldalcim.ttf);
+}
+
+@font-face {
+	font-family: tartalom;
+	src: url(betutipusok/tartalom.ttf);
+}
+
+/*====ALTALANOS_ELEMEK====*/
+
+html {
+	font-family: tartalom;
+	padding: 0px;
+	margin: 0px;
+	color: rgb(255, 255, 255);
+	font-size: 1.2em;
+}
+
+body {
+	background-image: url(kepek/hatter.png);
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0px;
+	margin: 0px;
+}
+
+header {
+	background-color: rgba(22, 47, 79, 0.6);
+	margin-top: 0;
+	margin-bottom: 2%;
+	font-size: 4vw;
+	font-family: oldalcim;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+}
+
+footer {
+	background-color: rgba(65, 65, 65, 0.6);
+	margin-top: 2%;
+	font-size: 0.8em;
+	text-align: center;
+	color: rgb(200, 200, 200);
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+}
+
+/*====MENU====*/
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav ul li {
+	padding: 15px;
+}
+
+nav li a {
+	display: block;
+	color: rgb(255, 255, 255);
+	background-color: rgba(22, 47, 79, 0.6);
+	text-align: center;
+	text-decoration: none;
+	border-style: solid;
+	border-color: rgb(255, 255, 255);
+	padding: 5%;
+}
+
+nav li a#active {
+	background-color: rgba(144, 153, 162, 0.6);
+}
+
+nav li a:hover, nav li a#active:hover {
+	background-color: rgb(255, 255, 255);
+	color: rgba(22, 47, 79, 0.6);
+	border-color: rgba(22, 47, 79, 0.6);
+}
+
+/*====OLDALELEMEK====*/
+
+div#content {
+	display: flex;
+	flex-direction: column;
+}
+
+article {
+	text-align: justify;
+	background-color: rgba(144, 153, 162, 0.6);
+	padding: 1% 2% 1% 2%;
+	margin: 1%;
+}
+
+figure {
+	height: fit-content;
+	padding: 1%;
+	background-color: rgba(144, 153, 162, 0.6);
+	text-align: center;
+	margin: 1%;
+}
+
+figcaption {
+	padding: 2%;
+}
+
+img {
+	max-width: 100%;
+}
+
+aside {
+	height: fit-content;
+	text-align: center;
+	background-color: rgba(144, 153, 162, 0.6);
+	padding: 1% 2% 1% 2%;
+	margin: 1%;
+}
+
+div#gallery {
+	height: fit-content;
+	padding: 15px;
+	background-color: rgba(144, 153, 162, 0.6);
+	margin: 15px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	flex-basis: 75%;
+	align-items: center;
+	gap: 0.8em;
+}
+
+div#gallery img {
+	transition: 2s;
+}
+
+div#gallery img:hover {
+	transform: scale(1.1);
+}
+
+div#top {
+	display: flex;
+	flex-direction: column;
+	padding: 1%;
+	background-color: rgba(144, 153, 162, 0.6);
+	margin: 1%;
+}
+
+#top table {
+	border: white solid 1px;
+	border-collapse: collapse;
+	padding: 0;
+	margin: 1% auto;
+	width: 100%;
+}
+
+#top table td {
+	border: white solid 1px;
+	padding: 2%;
+}
+
+section {
+	background-color: rgba(144, 153, 162, 0.6);
+	padding: 1% 2% 1% 2%;
+	margin: 1%;
+	text-align: right;
+	height: fit-content;
+}
+
+/*====OSZTALYOK====*/
+
+ul.list {
+	list-style-image: url('kepek/kor.png');
+}
+
+span {
+	background-color: rgba(65, 65, 65, 0.2);
+	padding: 2%;
+}
+
+/*====ADATBEVITEL====*/
+
+input.textbox {
+	width: 100%;
+	padding: 1%;
+	margin: 1%;
+	border: rgb(255, 255, 255) solid 1px;
+	border-radius: 4px;
+}
+
+input.button {
+	background-color: rgba(22, 47, 79, 0.6);
+	font-family: tartalom;
+	font-size: 0.8em;
+	padding: 12px 20px;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+	border-style: solid;
+	border-color: rgb(255, 255, 255);
+}
+
+input.button:hover {
+	background-color: rgb(255, 255, 255);
+	border-color: rgba(22, 47, 79, 0.6);
+	color: rgba(22, 47, 79, 0.6);
+}
+
+input.button:active {
+	background-color: rgba(144, 153, 162, 0.6);
+	border-color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
+
+/*====RESZPONZIVITAS====*/
+
+@media only screen and (min-width: 600px) {
+	/* tablet */
+	div#content {
+		flex-direction: row;
+	}
+	nav ul {
+		flex-direction: row;
+	}
+	nav ul li {
+		flex-basis: 33.33%;
+	}
+	div#content2 {
+		display: flex;
+		flex-direction: column;
+	}
+	#bottom {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	section {
+		flex-basis: 46%;
+	}
+	#bottom figure {
+		flex-basis: 46%;
+	}
+	#bottom aside {
+		flex-basis: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* számítógép */
+	article {
+		flex-basis: 66.66%;
+	}
+	figure {
+		flex-basis: 33.33%;
+	}
+	aside {
+		flex-basis: 25%;
+	}
+	section {
+		flex-basis: 23%;
+	}
+	#bottom figure {
+		flex-basis: 48%;
+	}
+	#bottom aside {
+		flex-basis: 23%;
+	}
+}

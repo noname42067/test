@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Hallgató">
+	<meta name="description" content="FUTUR Építész Stúdió weboldala">
+	<title>FUTUR Építész Stúdió</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="kepek/favicon.png" rel="icon" type="image/x-icon">
+
+</head>
+
+<body>
+	<header>
+		<p>FUTUR Építész Stúdió</p>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">Bemutatkozó</a></li>
+			<li><a href="galeria.html">Képgaléria</a></li>
+			<li><a href="#" id="active">Kapcsolat</a></li>
+		</ul>
+	</nav>
+	<div id="content2">
+		<div id="top">
+			<h2>Lépjen kapcsolatba velünk:</h2>
+			<form id="myform" action="http://szamtud.uni-corvinus.hu/receive.php"
+				method="post">
+				<table>
+					<tr>
+						<td colspan="2">
+							<h4>Elérhetőségek</h4>
+							<label>Név:</label>
+							<input class="textbox" type="text" id="nev" name="nev" size="50">
+							<br>
+							<label>E-Mail:</label>
+							<input class="textbox" type="text" name="email" size="50">
+							<br>
+							<label>Lakcím:</label>
+							<input class="textbox" type="text" name="lakcim" size="50">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>Milyen épülettípus iránt érdeklődik?</p>
+							<p>
+								<label>
+									<input type="radio" name="tipus" value="felhokarc" id="felhokarc">
+									Felhőkarcoló</label>
+								<br>
+								<label>
+									<input type="radio" name="tipus" value="tarsas" id="tarsas">
+									Társasház
+								</label>
+								<br>
+								<label>
+									<input type="radio" name="tipus" value="csaladi" id="csaladi">
+									Családiház</label>
+							</p>
+							<p>Milyen extrák érdeklik?</p>
+							<label>
+								<input type="checkbox" name="medence" id="medence" value="igen">
+								Medence</label>
+							<br>
+							<label>
+								<input type="checkbox" name="uvegfalak" id="uvegfalak" value="igen">
+								Üvegfalak</label>
+							<br>
+							<label>
+								<input type="checkbox" name="napelem" id="napelem" value="igen">
+								Napelem</label>
+						</td>
+						<td>
+							<p>
+								<input class="button" type="button" value="Kiszámol" id="mybutton">
+							</p>
+							<p>
+								A kivitelezéshez szükséges becsült hónapok száma:
+								<input class="textbox" type="text" id="ido" name="ido">
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><input class="button" type="submit" value="Elküld"> <input class="button"
+								type="reset" value="Töröl"></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<div id="bottom">
+			<section>
+				<p><span>FUTUR Építész Stúdió</span></p>
+				<p><span>Budapest, Példa u. 1, 1031</span></p>
+				<p><span>Telefonszám: +36 70 000 0000</span></p>
+				<p><span>E-mail: info@futur.hu</span>
+				</p>
+			</section>
+			<figure>
+				<img src="kepek/terkep.png" alt="térkép">
+				<p>Stúdiónkat a Példa Irodaparkban találja</p>
+			</figure>
+			<aside>
+				<p>Felhívjuk kedves ügyfeleink figyelmét, hogy Stúdiónk kizárólag személyes egyeztetés után tesz
+					árajánlatot.</p>
+				<p>
+					Ezáltal jobban megismerhetjük egymás elképzeléseit és elvárásait mielőtt tárgyalásokba
+					bocsátkoznánk, így elkerülve mindkét oldalon az
+					esetleges félreértések lehetőségét.
+				</p>
+				<p>Szíves megértésüket köszönjük ennek tekintetében.</p>
+			</aside>
+		</div>
+	</div>
+	<footer>
+		<p>Az oldal nem reprezentál valós vállalatot, csupán tanítási célokat szolgál.</p>
+	</footer>
+	<script src="script.js">
+</script>
+</body>
+
+</html>
